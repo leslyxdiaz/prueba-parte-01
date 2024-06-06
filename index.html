@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Componentes Bootstrap</title>
+    <link rel="stylesheet" href="assets/scss/proyecto.css"> 
+</head>
+<body>
+  
+
+    <div class="container mt-5">
+        <h1 class="mb-4">Componente Bootstrap</h1>
+        <p class="lead">Prueba de alerta, popover, toast y offcanvas</p>
+
+
+      <div class="container my-5">
+          <div class="row">
+              <!-- Alert Botòn -->
+              <div class="col-5">
+                  <div class="p-3 border bg-light text-center">
+                      <button class="btn btn-success" onclick="showAlert()">Alerta</button>
+                  </div>
+              </div>
+              <!-- Popover Botòn -->
+              <div class="col-5">
+                  <div class="p-3 border bg-light text-center">
+                      <button class="btn btn-success" data-bs-toggle="popover" data-bs-content="Un cuadro emergente que aparece cuando el usuario hace clic en un elemento">Popover</button>
+                  </div>
+              </div>
+
+
+              <!-- Toast Botòn -->
+            
+              <div class="col-5">
+                <div class="p-3 border bg-light text-center">
+                    <button class="btn btn-success" onclick="showToast()" data-bs-content="Son pequeñas notificaciones que aparecen en la parte superior o inferior de la pantalla">
+                        Toast
+                    </button>
+                    <div class="position-fixed bottom-0 end-0 p-3" style="z-index: 11">
+                        <div id="liveToast" class="toast" role="alert" aria-live="assertive" aria-atomic="true">
+                            <div class="toast-header">
+                                <strong class="me-auto">Bootstrap</strong>
+                                <small>Hace un momento</small>
+                                <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
+                            </div>
+                            <div id="toastBody" class="toast-body">
+                                Este es un toast de prueba.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                </div>
+            </div>
+          
+
+            <!-- Offcanvas -->
+            <div class="col-5">
+                <div class="p-3 border bg-light text-center">
+                    <button class="btn btn-success" id="offcanvasButton" data-bs-content="Contenido dinámico del offcanvas">
+                       Offcanvas
+                    </button>
+                </div>
+            </div>
+            <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasExample" aria-labelledby="offcanvasExampleLabel">
+                <div class="offcanvas-header">
+                    <h5 class="offcanvas-title" id="offcanvasExampleLabel">Offcanvas</h5>
+                    <div class="offcanvasContent"data-bs-content="Son pequeñas notificaciones que aparecen en la parte superior o inferior de la pantalla"></div>
+                    <p></p>
+                    <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                </div>
+                </div>
+            </div>
+            
+            
+  </body>
+  </html>
+  
+    <script src="assets/bootstrap-5.3.3/dist/js/bootstrap.bundle.js"></script>
+    <script src="assets/js/script.js"></script>
+</body>
+</html>
